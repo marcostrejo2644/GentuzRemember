@@ -1,0 +1,38 @@
+<div class="col-md-4 mx-auto center">
+  <div class="card">
+    <div class="card-header">
+      <h3>Add Note</h3>
+    </div>
+    <div class="card-body">
+      <form action="/notes/add-note" method="POST">
+        <div class="form-group">
+          <label for="typeNote">Type</label>
+          <select class="form-control" id="typeNote" name="typeNote">
+            <option value="Cook - Ingredient">Cook - Ingredients</option>
+            <option value="Proyects">Proyects</option>
+            <option value="Programming">Programming</optio>
+            <option value="Music">Music</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select class="form-control" id="priority" name="priority">
+            <option value="1">Max</option>
+            <option value="2">Medium</option>
+            <option value="3">Low</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" name="title" class="form-control" placeholder="Title" autofocus>
+        </div>
+        <div class="form-group">
+          <textarea name="description" class="form-control" placeholder="Description"></textarea>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary btn-block" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+{{#each notes}}
+<div class="col-md-4 mx-auto card center p{{priority}}">
+  <div class="card-body">
+    <h3 class="card-title d-flex justify-content-between align-items-center">{{title}} <a
+        href="/notes/edit-note/{{_id}}"><i class="fas fa-edit"></i></a></h3>
+    <p>{{typeNote}}</p>
+    <p>{{description}}</p>
+    <form action="/notes/delete-note/{{_id}}?_method=DELETE" method="POST">
+      <input type="hidden" name="_method" value="DELETE">
+      <button class="btn btn-danger btn-block btn-sm" type="submite">Delete</button></form>
+  </div>
+</div>
+{{else}}
+{{!-- <p class="text-center addNew">Add a new note</p> --}}
+<a class="d-block text-center addNew" href="/notes/add-note">Add Notes</a>
+{{/each}}
